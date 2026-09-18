@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "description": "Official storefront for Kuni, an independent Edo-period exploration game by Dylan Wells.",
+  "description": "Official storefront for Whisper of the Nine Tails (九尾の囁き), an independent Edo-period exploration game by Dylan Wells.",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

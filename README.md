@@ -1,8 +1,10 @@
-# Kuni storefront
+# Whisper of the Nine Tails storefront
 
-Official marketing site for **Kuni**, an independent Edo-period exploration game by Dylan Wells.
+Official marketing site for **Whisper of the Nine Tails** (九尾の囁き), an independent Edo-period exploration game by Dylan Wells.
 
 This is a static [Astro](https://astro.build) site. All public copy, store links, and media paths live in one file: [`src/content.ts`](src/content.ts).
+
+The GitHub repository and Cloudflare project remain `kuni-storefront`.
 
 ## Edit content
 
@@ -10,7 +12,7 @@ Open `src/content.ts` and change:
 
 | Field | What it controls |
 | --- | --- |
-| `game.title`, `game.tagline`, `game.pitch` | Hero and SEO |
+| `game.title`, `game.titleJa`, `game.tagline`, `game.pitch` | Hero, bilingual title, and SEO |
 | `game.steamUrl` | Steam CTA. Leave `""` until a real `https://store.steampowered.com/...` URL exists. Empty keeps every button as **Coming soon on Steam**. |
 | `game.price` / `game.priceLabel` | Buy panel. Do not invent a number. |
 | `game.trailerUrl` | Trailer iframe. Leave empty for the placeholder slot. |
@@ -60,7 +62,7 @@ GitHub project sites need that base path so CSS, images, and in-page links resol
 2. Build command: `npm run build`
 3. Output directory: `dist`
 4. Environment variables (production):
-   - `SITE_URL` = your custom domain, e.g. `https://kuni.example`
+   - `SITE_URL` = your custom domain, e.g. `https://your-domain.example`
    - `BASE_PATH` = `/` (root domain) unless the site is served from a subpath
 
 Cloudflare will run the build on each push to `main`. No extra adapter is required; this is a static Astro site.

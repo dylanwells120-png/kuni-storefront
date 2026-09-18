@@ -16,14 +16,16 @@ export const site = {
 } as const;
 
 export const game = {
-  title: "Kuni",
-  titleJa: "国",
-  workingTitle: true,
+  title: "Whisper of the Nine Tails",
+  titleJa: "九尾の囁き",
+  /** Single-character mark for the header seal, favicon, and hero atmosphere. */
+  seal: "九",
+  workingTitle: false,
   tagline: "Walk the provinces of Edo Japan.",
   pitch:
     "An independent exploration game about roads, weather, and the named kuni that once mapped the Japanese archipelago. Travel at a human pace. Read the land.",
   description:
-    "Kuni is an independent Unity game by Dylan Wells: a quiet Edo-period journey through Japan’s historical provinces. Wishlist and trailer coming soon.",
+    "Whisper of the Nine Tails (九尾の囁き) is an independent Unity game by Dylan Wells: a quiet Edo-period journey through Japan’s historical provinces. Wishlist and trailer coming soon.",
   genre: "Exploration",
   engine: "Unity",
   platforms: ["PC"],
@@ -88,7 +90,7 @@ export const about = {
   kicker: "The studio",
   title: "A quiet map, drawn by one person",
   paragraphs: [
-    "Dylan Wells is building Kuni independently. The working title comes from 国 (kuni), the historical provinces that once divided the Japanese archipelago. The game is an invitation to travel that map at walking speed: Edo-period roads, weather, and the particular character of each region.",
+    "Dylan Wells is building Whisper of the Nine Tails (九尾の囁き) independently. The game is an invitation to travel Edo-period Japan at walking speed: roads, weather, and the particular character of each region — including the named kuni, the historical provinces that once divided the archipelago.",
     "This site will change as a Steam page, trailer, and captured footage exist. Until then, the media here is atmospheric placeholder work — not screenshots, not reviews, not a store listing.",
   ],
 } as const;

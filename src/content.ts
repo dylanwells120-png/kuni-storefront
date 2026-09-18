@@ -11,7 +11,7 @@ export const site = {
   language: "en",
   author: "Dylan Wells",
   copyrightYear: 2026,
-  ogImage: "/og-image.svg",
+  ogImage: "/og-image.png",
   favicon: "/favicon.svg",
 } as const;
 
@@ -36,25 +36,25 @@ export const game = {
    */
   steamUrl: "" as string,
   trailerUrl: "" as string,
-  trailerPoster: "/media/trailer-placeholder.svg",
+  trailerPoster: "/media/trailer-placeholder.png",
   screenshots: [
     {
-      src: "/media/placeholder-coast.svg",
+      src: "/media/placeholder-coast.png",
       alt: "Placeholder atmosphere study: a dark coastal horizon with gold rule. Not gameplay footage.",
       caption: "Coast study",
     },
     {
-      src: "/media/placeholder-pass.svg",
+      src: "/media/placeholder-pass.png",
       alt: "Placeholder atmosphere study: layered mountain silhouettes. Not gameplay footage.",
       caption: "Pass study",
     },
     {
-      src: "/media/placeholder-town.svg",
+      src: "/media/placeholder-town.png",
       alt: "Placeholder atmosphere study: a night post-town suggested with lantern light. Not gameplay footage.",
       caption: "Town study",
     },
     {
-      src: "/media/placeholder-map.svg",
+      src: "/media/placeholder-map.png",
       alt: "Placeholder atmosphere study: a geometric province map fragment. Not gameplay footage.",
       caption: "Map study",
     },

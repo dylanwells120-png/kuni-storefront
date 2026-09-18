@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Placeholder coastal atmosphere study, not gameplay footage">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e1914"/>
@@ -9,6 +9,6 @@
   <path d="M0 500 C180 470 280 390 460 410 C640 430 700 520 900 490 C1120 455 1240 380 1600 420 V900 H0 Z" fill="#15120f"/>
   <path d="M0 620 C260 590 480 680 760 650 C1040 620 1280 710 1600 680 V900 H0 Z" fill="#0c0a09"/>
   <ellipse cx="1180" cy="280" rx="90" ry="8" fill="#c4a35a" opacity="0.18"/>
-  <text x="72" y="88" font-family="sans-serif" font-size="18" letter-spacing="7" fill="#c4a35a">PLACEHOLDER</text>
-  <text x="72" y="830" font-family="serif" font-size="34" fill="#e8dcc8">Coast study  not gameplay footage</text>
+  <text x="72" y="88" font-family="Georgia, serif" font-size="18" letter-spacing="7" fill="#c4a35a">PLACEHOLDER</text>
+  <text x="72" y="830" font-family="Georgia, serif" font-size="34" fill="#e8dcc8">Coast study - not gameplay footage</text>
 </svg>

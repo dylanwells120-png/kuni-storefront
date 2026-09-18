@@ -496,7 +496,7 @@ dd {
   place-content: center;
   justify-items: center;
   gap: 0.85rem;
-  background: linear-gradient(180deg, rgba(7, 6, 5, 0.1), rgba(7, 6, 5, 0.55));
+  background: linear-gradient(180deg, rgba(7, 6, 5, 0.08), rgba(7, 6, 5, 0.42));
   color: var(--paper);
   letter-spacing: 0.18em;
   text-transform: uppercase;

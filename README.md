@@ -19,7 +19,7 @@ Open `src/content.ts` and change:
 
 Replace files in `public/media/` when you have real stills or a trailer poster. The current SVGs are atmosphere studies, labeled as **not gameplay**.
 
-Open Graph / Twitter cards use `public/og-image.svg`. Swap it for a 1200×630 PNG and point `site.ogImage` at the new file when you have art.
+Open Graph / Twitter cards use `public/og-image.png` (1200×630). Replace that file when you have final art.
 
 ## Local development
 

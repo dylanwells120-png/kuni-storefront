@@ -10,8 +10,6 @@
   <path d="M0 540 C240 500 360 610 560 560 C760 510 820 430 1040 470 C1260 510 1400 620 1600 580 V900 H0 Z" fill="#12100d"/>
   <path d="M0 640 C300 600 520 720 820 680 C1100 640 1280 740 1600 700 V900 H0 Z" fill="#0a0908"/>
   <line x1="0" y1="430" x2="1600" y2="430" stroke="#c4a35a" stroke-width="1" opacity="0.25"/>
-  <circle cx="800" cy="450" r="46" fill="none" stroke="#c4a35a" stroke-width="1.5"/>
-  <polygon points="792,432 792,468 820,450" fill="#e4c47a"/>
   <text x="80" y="80" font-family="Georgia, serif" font-size="20" letter-spacing="8" fill="#c4a35a">TRAILER SLOT</text>
   <text x="80" y="840" font-family="Georgia, serif" font-size="36" fill="#e8dcc8" opacity="0.8">Placeholder - not gameplay footage</text>
 </svg>

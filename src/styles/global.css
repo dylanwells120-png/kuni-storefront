@@ -161,19 +161,17 @@ main {
   display: flex;
   flex-direction: column;
   font-family: var(--font-display);
-  font-size: 1.35rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  line-height: 1;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
 }
 
 .brand-note {
-  margin-top: 0.28rem;
-  font-family: var(--font-body);
-  font-size: 0.62rem;
+  margin-top: 0.22rem;
+  font-family: var(--font-jp);
+  font-size: 0.68rem;
   letter-spacing: 0.16em;
-  color: var(--paper-dim);
-  text-transform: uppercase;
+  color: var(--gold);
 }
 
 .site-nav {
@@ -330,7 +328,7 @@ main {
 
 .hero-copy {
   position: relative;
-  max-width: 38rem;
+  max-width: 42rem;
 }
 
 .eyebrow {
@@ -350,6 +348,22 @@ main {
   letter-spacing: 0.08em;
   line-height: 0.9;
   text-transform: uppercase;
+}
+
+.hero .display-title {
+  font-size: clamp(2.45rem, 6.4vw, 4.6rem);
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  text-transform: none;
+}
+
+.hero-title-ja {
+  margin: 0.85rem 0 0;
+  font-family: var(--font-jp);
+  font-size: clamp(1.15rem, 2.5vw, 1.7rem);
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  color: var(--gold-bright);
 }
 
 .hero-tagline {
@@ -407,6 +421,16 @@ dd {
   margin: 0.25rem 0 0;
   font-family: var(--font-display);
   font-size: 1.2rem;
+}
+
+.buy-title-ja,
+.footer-mark-ja {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--font-jp);
+  font-size: 0.92rem;
+  letter-spacing: 0.18em;
+  color: var(--gold);
 }
 
 .section {
@@ -679,10 +703,14 @@ dd {
 }
 
 .footer-mark {
-  margin: 0 0 0.4rem;
+  margin: 0;
   font-family: var(--font-display);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+}
+
+.footer-mark-ja {
+  margin: 0.25rem 0 0.55rem;
 }
 
 .footer-copy,
@@ -721,6 +749,11 @@ dd {
 }
 
 @media (max-width: 860px) {
+  .brand-word {
+    font-size: 0.92rem;
+    max-width: 14.5rem;
+  }
+
   .nav-toggle {
     display: grid;
     place-items: center;

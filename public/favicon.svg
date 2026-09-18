@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kuni">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Whisper of the Nine Tails">
   <rect width="64" height="64" fill="#070605"/>
   <circle cx="32" cy="32" r="22" fill="none" stroke="#c4a35a" stroke-width="1.25"/>
-  <text x="32" y="39" text-anchor="middle" font-family="serif" font-size="22" fill="#e4c47a">ý</text>
+  <text x="32" y="40" text-anchor="middle" font-family="Noto Serif JP, serif" font-size="22" fill="#e4c47a">?</text>
 </svg>

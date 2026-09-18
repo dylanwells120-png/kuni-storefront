@@ -9,10 +9,10 @@ const steamReady = isSteamReady();
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href={home} aria-label={`${game.title} home`}>
-      <span class="brand-seal" aria-hidden="true">{game.titleJa}</span>
+      <span class="brand-seal" aria-hidden="true">{game.seal}</span>
       <span class="brand-word">
         {game.title}
-        {game.workingTitle && <span class="brand-note">Working title</span>}
+        <span class="brand-note" lang="ja">{game.titleJa}</span>
       </span>
     </a>
 

@@ -1,12 +1,13 @@
 ---
-import { site, social } from "../content";
+import { game, site, social } from "../content";
 import { withBase } from "../lib/paths";
 ---
 
 <footer class="site-footer">
   <div class="footer-inner">
     <div>
-      <p class="footer-mark">Kuni</p>
+      <p class="footer-mark">{game.title}</p>
+      <p class="footer-mark-ja" lang="ja">{game.titleJa}</p>
       <p class="footer-copy">
         © {site.copyrightYear} {site.author}. All rights reserved.
       </p>

@@ -7,12 +7,15 @@ const steamReady = isSteamReady();
 
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-atmosphere" aria-hidden="true">
-    <span class="hero-kanji">{game.titleJa}</span>
+    <span class="hero-kanji">{game.seal}</span>
     <span class="hero-horizon"></span>
   </div>
   <div class="hero-copy">
-    {game.workingTitle && <p class="eyebrow">Independent exploration · Working title</p>}
+    <p class="eyebrow">
+      Independent exploration{game.workingTitle ? " · Working title" : ""}
+    </p>
     <h1 id="hero-title" class="display-title">{game.title}</h1>
+    <p class="hero-title-ja" lang="ja">{game.titleJa}</p>
     <p class="hero-tagline">{game.tagline}</p>
     <p class="hero-pitch">{game.pitch}</p>
     <div class="hero-actions">

@@ -13,7 +13,7 @@ interface Props {
 }
 
 const {
-  title = `${game.title} — ${game.tagline}`,
+  title = `${game.title} | ${game.titleJa}`,
   description = game.description,
   canonicalPath = "/",
   noindex = false,
@@ -58,8 +58,9 @@ const jsonLd = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:alt" content={`${game.title} storefront — placeholder mark`} />
+    <meta property="og:image:alt" content={`${game.title} / ${game.titleJa} storefront — placeholder mark`} />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ja_JP" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Placeholder mountain pass atmosphere study, not gameplay footage">
+  <rect width="1600" height="900" fill="#0a0908"/>
+  <path d="M0 620 L220 360 L410 540 L640 220 L880 500 L1120 300 L1360 520 L1600 340 V900 H0 Z" fill="#161310"/>
+  <path d="M0 720 L180 520 L420 680 L700 400 L980 660 L1240 480 L1600 620 V900 H0 Z" fill="#100e0c"/>
+  <line x1="640" y1="220" x2="700" y2="180" stroke="#c4a35a" stroke-width="1" opacity="0.45"/>
+  <text x="72" y="88" font-family="sans-serif" font-size="18" letter-spacing="7" fill="#c4a35a">PLACEHOLDER</text>
+  <text x="72" y="830" font-family="serif" font-size="34" fill="#e8dcc8">Pass study  not gameplay footage</text>
+</svg>

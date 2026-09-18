@@ -1,0 +1,33 @@
+---
+import { site, social } from "../content";
+import { withBase } from "../lib/paths";
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <p class="footer-mark">Kuni</p>
+      <p class="footer-copy">
+        © {site.copyrightYear} {site.author}. All rights reserved.
+      </p>
+    </div>
+    <div class="footer-meta">
+      {
+        social.links.length > 0 ? (
+          <ul class="social-list">
+            {social.links.map((link) => (
+              <li>
+                <a href={link.href} rel="noopener noreferrer">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="footer-soon">{social.note}</p>
+        )
+      }
+      <a class="footer-top" href={withBase("/")}>Return home</a>
+    </div>
+  </div>
+</footer>

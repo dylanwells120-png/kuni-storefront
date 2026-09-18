@@ -1,0 +1,47 @@
+---
+import { game, isSteamReady, steamCtaLabel } from "../content";
+import { withBase } from "../lib/paths";
+
+const steamReady = isSteamReady();
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-atmosphere" aria-hidden="true">
+    <span class="hero-kanji">{game.titleJa}</span>
+    <span class="hero-horizon"></span>
+  </div>
+  <div class="hero-copy">
+    {game.workingTitle && <p class="eyebrow">Independent exploration · Working title</p>}
+    <h1 id="hero-title" class="display-title">{game.title}</h1>
+    <p class="hero-tagline">{game.tagline}</p>
+    <p class="hero-pitch">{game.pitch}</p>
+    <div class="hero-actions">
+      {
+        steamReady ? (
+          <a class="btn btn-gold" href={game.steamUrl} rel="noopener noreferrer">
+            {steamCtaLabel()}
+          </a>
+        ) : (
+          <span class="btn btn-gold" aria-disabled="true">
+            {steamCtaLabel()}
+          </span>
+        )
+      }
+      <a class="btn btn-ghost" href={withBase("/#media")}>View media</a>
+    </div>
+    <dl class="hero-facts">
+      <div>
+        <dt>Engine</dt>
+        <dd>{game.engine}</dd>
+      </div>
+      <div>
+        <dt>Platform</dt>
+        <dd>{game.platforms.join(", ")}</dd>
+      </div>
+      <div>
+        <dt>Store</dt>
+        <dd>{steamReady ? "Steam" : "Steam · coming soon"}</dd>
+      </div>
+    </dl>
+  </div>
+</section>

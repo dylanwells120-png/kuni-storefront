@@ -1,0 +1,98 @@
+---
+import { game, isTrailerReady } from "../content";
+import { withBase } from "../lib/paths";
+
+const trailerReady = isTrailerReady();
+---
+
+<section class="section" id="media" aria-labelledby="media-title">
+  <div class="section-heading">
+    <p class="eyebrow">Media</p>
+    <h2 id="media-title">Trailer and studies</h2>
+    <p class="lede">
+      Captured gameplay will replace these frames when it exists. What you see now is
+      placeholder atmosphere — ink, gold, and paper — not a screenshot from the game.
+    </p>
+  </div>
+
+  <figure class="trailer">
+    {
+      trailerReady ? (
+        <div class="trailer-frame">
+          <iframe
+            src={game.trailerUrl}
+            title={`${game.title} trailer`}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
+      ) : (
+        <div class="trailer-frame trailer-placeholder">
+          <img
+            src={withBase(game.trailerPoster)}
+            alt="Placeholder trailer frame. Trailer not yet published."
+            width="1600"
+            height="900"
+          />
+          <div class="trailer-caption-overlay">
+            <span class="play-glyph" aria-hidden="true"></span>
+            <p>Trailer coming soon</p>
+          </div>
+        </div>
+      )
+    }
+    <figcaption>Official trailer slot — empty until a public video URL is set in content.</figcaption>
+  </figure>
+
+  <ul class="gallery">
+    {
+      game.screenshots.map((shot) => (
+        <li>
+          <figure>
+            <button
+              class="gallery-trigger"
+              type="button"
+              data-lightbox-src={withBase(shot.src)}
+              data-lightbox-alt={shot.alt}
+              aria-haspopup="dialog"
+            >
+              <img src={withBase(shot.src)} alt={shot.alt} width="1600" height="900" loading="lazy" />
+            </button>
+            <figcaption>
+              {shot.caption}
+              <span>Placeholder · not gameplay</span>
+            </figcaption>
+          </figure>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<dialog class="lightbox" data-lightbox aria-label="Enlarged placeholder image">
+  <form method="dialog">
+    <button class="lightbox-close" value="close" type="submit">Close</button>
+  </form>
+  <img alt="" data-lightbox-image />
+</dialog>
+
+<script>
+  const dialog = document.querySelector("[data-lightbox]") as HTMLDialogElement | null;
+  const image = document.querySelector("[data-lightbox-image]") as HTMLImageElement | null;
+
+  document.querySelectorAll<HTMLButtonElement>("[data-lightbox-src]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!dialog || !image) return;
+      image.src = button.dataset.lightboxSrc || "";
+      image.alt = button.dataset.lightboxAlt || "";
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      }
+    });
+  });
+
+  dialog?.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+</script>

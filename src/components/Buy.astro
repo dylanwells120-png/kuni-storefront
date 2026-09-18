@@ -1,0 +1,55 @@
+---
+import { game, isSteamReady, steamCtaLabel, site } from "../content";
+
+const steamReady = isSteamReady();
+const price = game.price || game.priceLabel;
+---
+
+<section class="section" id="wishlist" aria-labelledby="buy-title">
+  <div class="buy-panel">
+    <div>
+      <p class="eyebrow">Wishlist</p>
+      <h2 id="buy-title">When the page is live, start here</h2>
+      <p class="lede">
+        The Steam listing is not public yet. This button will become a real store link
+        the moment a URL is added to the site config — no placeholder store, no invented
+        price.
+      </p>
+    </div>
+    <dl class="buy-facts">
+      <div>
+        <dt>Title</dt>
+        <dd>{game.title}</dd>
+      </div>
+      <div>
+        <dt>Developer</dt>
+        <dd>{site.author}</dd>
+      </div>
+      <div>
+        <dt>Price</dt>
+        <dd>{price}</dd>
+      </div>
+      <div>
+        <dt>Availability</dt>
+        <dd>{steamReady ? "Steam" : "Coming soon on Steam"}</dd>
+      </div>
+    </dl>
+    <div class="buy-actions">
+      {
+        steamReady ? (
+          <a class="btn btn-gold" href={game.steamUrl} rel="noopener noreferrer">
+            {steamCtaLabel()}
+          </a>
+        ) : (
+          <span class="btn btn-gold" aria-disabled="true">
+            {steamCtaLabel()}
+          </span>
+        )
+      }
+      <p class="buy-note">
+        The listing, trailer, and captured stills will appear here as soon as they are
+        public. Nothing on this page pretends to be a live store.
+      </p>
+    </div>
+  </div>
+</section>

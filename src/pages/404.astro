@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { game } from "../content";
+import { withBase } from "../lib/paths";
+---
+
+<BaseLayout
+  title={`Path not found — ${game.title}`}
+  description="This page is not on the map. Return to the Kuni storefront."
+  canonicalPath="/404/"
+  noindex
+>
+  <section class="not-found" aria-labelledby="missing-title">
+    <p class="eyebrow">404</p>
+    <h1 id="missing-title" class="display-title">This path is not on the map</h1>
+    <p class="lede">
+      The page you asked for does not exist on the {game.title} storefront. The road
+      home is still open.
+    </p>
+    <a class="btn btn-gold" href={withBase("/")}>Return to the storefront</a>
+  </section>
+</BaseLayout>

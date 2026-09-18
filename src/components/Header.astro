@@ -1,0 +1,77 @@
+---
+import { game, nav, steamCtaLabel, isSteamReady } from "../content";
+import { withBase } from "../lib/paths";
+
+const home = withBase("/");
+const steamReady = isSteamReady();
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href={home} aria-label={`${game.title} home`}>
+      <span class="brand-seal" aria-hidden="true">{game.titleJa}</span>
+      <span class="brand-word">
+        {game.title}
+        {game.workingTitle && <span class="brand-note">Working title</span>}
+      </span>
+    </a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      data-nav-toggle
+    >
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" data-nav aria-label="Primary">
+      <ul>
+        {
+          nav.map((item) => (
+            <li>
+              <a href={withBase(item.href)}>{item.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+      {
+        steamReady ? (
+          <a class="btn btn-compact" href={game.steamUrl} rel="noopener noreferrer">
+            {steamCtaLabel()}
+          </a>
+        ) : (
+          <span class="btn btn-compact" aria-disabled="true">
+            {steamCtaLabel()}
+          </span>
+        )
+      }
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector("[data-nav-toggle]");
+  const nav = document.querySelector("[data-nav]");
+
+  function setOpen(open: boolean) {
+    toggle?.setAttribute("aria-expanded", String(open));
+    nav?.classList.toggle("is-open", open);
+    document.body.classList.toggle("nav-open", open);
+  }
+
+  toggle?.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") !== "true";
+    setOpen(open);
+  });
+
+  nav?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setOpen(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+</script>

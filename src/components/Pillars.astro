@@ -1,0 +1,25 @@
+---
+import { pillars } from "../content";
+---
+
+<section class="section" id="game" aria-labelledby="pillars-title">
+  <div class="section-heading">
+    <p class="eyebrow">The game</p>
+    <h2 id="pillars-title">What the journey is for</h2>
+    <p class="lede">
+      Kuni is being shaped as a place to walk, not a product to grind. These are the
+      intentions that guide the work.
+    </p>
+  </div>
+  <ul class="pillar-grid">
+    {
+      pillars.map((pillar) => (
+        <li class="pillar">
+          <p class="pillar-index">{pillar.index}</p>
+          <h3>{pillar.title}</h3>
+          <p>{pillar.body}</p>
+        </li>
+      ))
+    }
+  </ul>
+</section>

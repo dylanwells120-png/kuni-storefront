@@ -26,31 +26,31 @@ const steamReady = isSteamReady();
       <span class="nav-toggle-bars" aria-hidden="true"></span>
       <span class="visually-hidden">Menu</span>
     </button>
-
-    <nav id="site-nav" class="site-nav" data-nav aria-label="Primary">
-      <ul>
-        {
-          nav.map((item) => (
-            <li>
-              <a href={withBase(item.href)}>{item.label}</a>
-            </li>
-          ))
-        }
-      </ul>
-      {
-        steamReady ? (
-          <a class="btn btn-compact" href={game.steamUrl} rel="noopener noreferrer">
-            {steamCtaLabel()}
-          </a>
-        ) : (
-          <span class="btn btn-compact" aria-disabled="true">
-            {steamCtaLabel()}
-          </span>
-        )
-      }
-    </nav>
   </div>
 </header>
+
+<nav id="site-nav" class="site-nav" data-nav aria-label="Primary">
+  <ul>
+    {
+      nav.map((item) => (
+        <li>
+          <a href={withBase(item.href)}>{item.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+  {
+    steamReady ? (
+      <a class="btn btn-compact" href={game.steamUrl} rel="noopener noreferrer">
+        {steamCtaLabel()}
+      </a>
+    ) : (
+      <span class="btn btn-compact" aria-disabled="true">
+        {steamCtaLabel()}
+      </span>
+    )
+  }
+</nav>
 
 <script>
   const toggle = document.querySelector("[data-nav-toggle]");
